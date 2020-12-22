@@ -43,6 +43,8 @@ button {
   cursor: pointer;
   color: white;
   padding: 0.75rem 1rem;
+  align-self: flex-end;
+  margin-top: 0.5rem;
 }
 
 button:focus {
@@ -56,8 +58,10 @@ button:active {
 }
 
 .projects {
-  margin: 1rem;
+  margin-bottom: 1rem;
   border: 1px solid #ff0062;
+  width: 100%;
+  max-width: 600px;
 }
 
 .projects header {
@@ -121,8 +125,19 @@ button:active {
 }
 
 #user-input {
-  margin: 1rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   border: 1px solid #ff0062;
   background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
