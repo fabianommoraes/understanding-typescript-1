@@ -1,7 +1,7 @@
 // Project Type
 enum ProjectStatus {
-  Active,
-  Finished,
+  Active = "active",
+  Finished = "finished",
 }
 
 class Project {
@@ -92,7 +92,7 @@ class ProjectList {
   element: HTMLElement;
   assignedProjects: Project[];
 
-  constructor(private type: "active" | "finished") {
+  constructor(private type: ProjectStatus) {
     this.templateElement = document.getElementById("project-list")! as HTMLTemplateElement;
     this.hostElement = document.getElementById("app")! as HTMLDivElement;
     this.assignedProjects = [];
@@ -211,5 +211,5 @@ class ProjectInput {
 }
 
 const prjInput = new ProjectInput();
-const activePrjList = new ProjectList("active");
-const finishedPrjList = new ProjectList("finished");
+const activePrjList = new ProjectList(ProjectStatus.Active);
+const finishedPrjList = new ProjectList(ProjectStatus.Finished);
